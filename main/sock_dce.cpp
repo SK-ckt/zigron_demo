@@ -260,7 +260,8 @@ bool DCE::init(sock_dce::MODEM_DNA_STATS* modem_dna)
         esp_modem::Task::Delay(1000);
     }
     ESP_LOGD(TAG, "Modem in sync");
-    // get_creg();
+    get_creg();
+    int actt;
     get_operator_name(modem_dna->operator_name, actt);
     get_imsi(modem_dna->imsi);
     get_imei(modem_dna->imei);
@@ -294,7 +295,6 @@ bool DCE::init(sock_dce::MODEM_DNA_STATS* modem_dna)
         }
         esp_modem::Task::Delay(5000);
     }
-    int actt;
     ESP_LOGI(TAG, "Got IP %s", modem_dna->ip_address.c_str());
     return true;
 }

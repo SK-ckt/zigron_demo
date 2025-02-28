@@ -118,7 +118,7 @@ extern "C" void app_main(void)
     gpio_set_direction( (gpio_num_t)7, GPIO_MODE_OUTPUT);
     gpio_set_level( (gpio_num_t)7, 0);
     gpio_set_direction( (gpio_num_t)38, GPIO_MODE_OUTPUT);
-    gpio_set_level( (gpio_num_t)38, 0);
+    gpio_set_level( (gpio_num_t)38, 1); //high for A and LOW for Sim B
     gpio_set_direction( (gpio_num_t)48, GPIO_MODE_INPUT);
 
     /* Configure and create the UART DTE */
